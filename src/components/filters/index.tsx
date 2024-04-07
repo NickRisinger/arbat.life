@@ -38,24 +38,52 @@ export default function Filters() {
         </div>
       </div>
       <div className="flex gap-x-2">
-        <select className="rounded-[10px]" name="" id="">
+        <select className="w-[150px] rounded-[10px]" name="" id="">
           <option value="">Купить</option>
           <option value="">Снять</option>
         </select>
 
-        <div className="flex">
-          <input type="number" className="rounded-l-[10px]" placeholder="От" />
-          <input type="number" className="rounded-r-[10px]" placeholder="До" />
+        <div className="flex w-[200px]">
+          <input
+            type="number"
+            className="w-1/2 rounded-l-[10px]"
+            placeholder="От"
+          />
+          <input
+            type="number"
+            className="w-1/2 rounded-r-[10px]"
+            placeholder="До"
+          />
         </div>
-        <div className="flex">
-          <input type="number" className="rounded-l-[10px]" placeholder="От" />
-          <input type="number" className="rounded-r-[10px]" placeholder="До" />
+        <div className="flex w-[200px]">
+          <input
+            type="number"
+            className="w-1/2 rounded-l-[10px]"
+            placeholder="От"
+          />
+          <input
+            type="number"
+            className="w-1/2 rounded-r-[10px]"
+            placeholder="До"
+          />
         </div>
-        <div className="flex">
-          <input type="number" className="rounded-l-[10px]" placeholder="От" />
-          <input type="number" className="rounded-r-[10px]" placeholder="До" />
+        <div className="flex w-[316px]">
+          <input
+            type="number"
+            className="w-1/2 rounded-l-[10px]"
+            placeholder="От"
+          />
+          <input
+            type="number"
+            className="w-1/2 rounded-r-[10px]"
+            placeholder="До"
+          />
         </div>
-        <input type="text" className="rounded-[10px]" placeholder="Адрес" />
+        <input
+          type="text"
+          className="w-[316px] rounded-[10px]"
+          placeholder="Адрес"
+        />
 
         <button className="rounded-[10px] bg-white p-[17px]">
           <svg
@@ -90,7 +118,63 @@ export default function Filters() {
           </svg>
         </button>
       </div>
-      <div className="">modal</div>
+
+      <div className="fixed left-[50%] top-[50%] z-20 flex h-5/6 w-[604px] -translate-x-[50%] -translate-y-[50%] flex-col gap-y-8 overflow-hidden rounded border border-gray-200 bg-white p-8 shadow-[0px_0px_24px_0px_#687D861A] transition-all duration-300">
+        <div className="relative flex items-center justify-between">
+          <div className="flex items-center gap-x-5">
+            <h2 className="text-2xl font-semibold text-[#2F2F2F]">
+              Все фильтры
+            </h2>
+            <select name="" id="">
+              <option value="2">Квартиры</option>
+              <option value="1">Комнаты</option>
+              <option value="3">Дома, дачи, коттеджи</option>
+              <option value="7">Новостройки</option>
+              <option value="4">Коммерческая</option>
+              <option value="5">Земельные участки</option>
+              <option value="6">Гаражи и машинместа</option>
+            </select>
+          </div>
+          <button className="">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L10 8.93934L14.2197 4.71967C14.5126 4.42678 14.9874 4.42678 15.2803 4.71967C15.5732 5.01256 15.5732 5.48744 15.2803 5.78033L11.0607 10L15.2803 14.2197C15.5732 14.5126 15.5732 14.9874 15.2803 15.2803C14.9874 15.5732 14.5126 15.5732 14.2197 15.2803L10 11.0607L5.78033 15.2803C5.48744 15.5732 5.01256 15.5732 4.71967 15.2803C4.42678 14.9874 4.42678 14.5126 4.71967 14.2197L8.93934 10L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z"
+                fill="#2F2F2F"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="vertical-scrollbar scrollbar-md relative h-full w-full overflow-hidden overflow-y-auto">
+          <div className="bg-slate-100">
+            <div className=""></div>
+            <div className="grid grid-cols-2">
+              <div className="">Город</div>
+              <div className="">Общая площадь, м²</div>
+              <div className="">Адрес</div>
+              <div className="">Жилая площадь, м²</div>
+              <div className="">Этаж</div>
+              <div className="">Площадь кухни, м²</div>
+              <div className="">Менеджер</div>
+            </div>
+          </div>
+        </div>
+        <div className="relative flex items-center gap-x-3">
+          <button className="h-[48px] rounded-[10px] bg-[#E2061A] px-4 py-[14px] text-white">
+            Показать объявления
+          </button>
+          <button className="h-[48px] rounded-[10px] border border-[#C5C5C5] px-4 py-[14px]">
+            Сбросить
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
